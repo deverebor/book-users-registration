@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+>
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <h:outputStylesheet library="styles" name="index.css" />
+    <title>Cadastro de transações financeiras</title>
+</h:head>
+<h:body>
+    <h:form>
+        <label for="codeInput" class="book-registration__label">
+            Código:
+        </label>
+        <h:inputText id="codeInput" class="book-registration__input" value="#{bookMemoryDataBase.bookId}" />
+
+        <label for="bookNameInput" class="book-registration__label">
+            Nome do Livro:
+        </label>
+        <h:inputText id="bookNameInput" class="book-registration__input" value="#{bookMemoryDataBase.bookName}" />
+
+        <label for="bookAuthorInput" class="book-registration__label">
+            Autor:
+        </label>
+        <h:inputText id="bookAuthorInput" class="book-registration__input" value="#{bookMemoryDataBase.bookAuthor}" />
+
+        <label for="bookLabelInput" class="book-registration__label">
+            Editora:
+        </label>
+        <h:inputText id="bookLabelInput" class="book-registration__input" value="#{bookMemoryDataBase.bookLabel}" />
+
+        <label for="bookPageQuantityInput" class="book-registration__label">
+            Quantidade de páginas:
+        </label>
+        <h:inputText id="bookPageQuantityInput" class="book-registration__input" value="#{bookMemoryDataBase.bookPageQuantity}" />
+
+    </h:form>
+
+    <section>
+        <h1>Livro cadastrado:</h1>
+        <ol>
+            <li>Código: #{bookMemoryDataBase.bookId}</li>
+            <li>Nome: #{bookMemoryDataBase.bookName}</li>
+            <li>Autor: #{bookMemoryDataBase.bookAuthor}</li>
+            <li>Editora: #{bookMemoryDataBase.bookLabel}</li>
+            <li>Quantidade de páginas: #{bookMemoryDataBase.bookPageQuantity}</li>
+        </ol>
+    </section>
+</h:body>
+</html>
